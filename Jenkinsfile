@@ -1,7 +1,7 @@
 pipeline {
     agent any 
     stages {
-        stage(''checkout from script){
+        stage('checkout from script'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/nagababudba0999/fresh_repo.git']]])
             }           
